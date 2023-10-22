@@ -1,27 +1,27 @@
-# **Tag:{{tag}}** [![pipeline status](https://sourcecontrol.hsenidmobile.com/core/m1/sdp/badges/{{tag}}/pipeline.svg)](https://sourcecontrol.hsenidmobile.com/core/m1/sdp/-/commits/{{tag}})
+# **Tag:0.0.1** [![pipeline status](https://sourcecontrol.hsenidmobile.com/core/m1/sdp/badges/0.0.1/pipeline.svg)](https://sourcecontrol.hsenidmobile.com/core/m1/sdp/-/commits/0.0.1)
 
-* M1-Digital Office **{{tag}}** is available for DA testing.
+* M1-Digital Office **0.0.1** is available for DA testing.
 
 
 ## GIT Location
 
 * **Branch**: main
 
-* **Tag:**  {{tag}}
+* **Tag:**  0.0.1
 
 
 ## How to checkout
 
 ```
  git clone ssh://git@sourcecontrol.hsenidmobile.com:2222/core/m1/sdp.git
- git checkout  {{tag}}
+ git checkout  0.0.1
 
 ```
 ## Dependencies
 ### in-connector
 ```
  git clone ssh://git@sourcecontrol.hsenidmobile.com:2222/core/m1/in-connector.git
- git checkout  {{tag}}
+ git checkout  0.0.1
 
 ```
 
@@ -50,7 +50,7 @@
 
 ## Patch Details:
 
-* Configuration changes can be found in SDP-dev [{{old_tag}} to {{tag}}](https://sourcecontrol.hsenidmobile.com/core/m1/sdp-dev/-/compare/{{old_tag}}...{{tag}})
+* Configuration changes can be found in SDP-dev [{{old_tag}} to 0.0.1](https://sourcecontrol.hsenidmobile.com/core/m1/sdp-dev/-/compare/{{old_tag}}...0.0.1)
 
 ## Features
 * BundleSubscription feature implementation
