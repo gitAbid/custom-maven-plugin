@@ -33,14 +33,15 @@ class GenerateReleaseNoteMojo : AbstractMojo() {
         if (template?.exists() == true) {
             log.info("Found release note template")
             log.info("Generating release note for ${project.version}")
-            val version = shellRunner.runShell(gitLastTagCommand)
-            log.info("Current Release version $version")
-            val previousVersion = shellRunner.runShell(gitSecondTagCommand)
+            val versions = shellRunner.runShell(gitGetAllTags).split("\n")
+            val previousVersion = versions.first().replace("\n", "")
+            val currentVersion = versions.drop(1).first().replace("\n", "")
+            log.info("Current Release version $currentVersion")
             log.info("Previous Release version $previousVersion")
             createReleaseNote(
-                version, mapOf(
-                    "tag" to version,
-                    "old_tag" to previousVersion
+                currentVersion, mapOf(
+                    "current_version" to currentVersion,
+                    "previous_version" to previousVersion
                 ), template?.readText() ?: ""
             )
         } else {
